@@ -32,7 +32,8 @@ jobs:
       # Build your program with the given configuration
       run: |
         cmake --build ${{github.workspace}}/tensorflow_lite --config ${{env.BUILD_TYPE}}
-        tar -cvf ${{github.workspace}}/tensorflow_lite.tar.gz ${{github.workspace}}/tensorflow_lite
+        tar -cvf ${{github.workspace}}/tensorflow_lite.tar.gz ${{github.workspace}}/tensorflow_lite        
+        tar -cvf ${{github.workspace}}/tensorflow_src.tar.gz ${{github.workspace}}
         
     - name: 'Upload Artifact'
       uses: actions/upload-artifact@v2
