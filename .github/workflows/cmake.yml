@@ -41,5 +41,12 @@ jobs:
         name: tensorflow_lite
         path: ${{github.workspace}}/tensorflow_lite.tar.gz
         retention-days: 5
+        
+    - name: 'Upload Workspace'
+      uses: actions/upload-artifact@v2
+      with:
+        name: tensorflow_workspace
+        path: ${{github.workspace}}/tensorflow_src.tar.gz
+        retention-days: 5
 
       
